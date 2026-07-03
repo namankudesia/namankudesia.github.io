@@ -338,6 +338,161 @@ footer a:hover{color:var(--p);}
 @media(min-width:1400px){
   .hero-in,.sw{max-width:1320px;}
 }
+
+/* ══ UNIQUE PROJECT CARDS ══ */
+.pg{ display:grid; grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr)); gap:20px; margin-top:56px; }
+
+/* Card 1 — HealthAI: Dark clinical green with scan-line effect */
+.pc-1{
+  background:#060D0A;
+  border:1px solid #00FF88;
+  border-radius:4px;
+  padding:28px;
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:all .3s;
+  box-shadow:0 0 24px rgba(0,255,136,.08), inset 0 0 40px rgba(0,255,136,.03);
+}
+.pc-1::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,255,136,.02) 2px,rgba(0,255,136,.02) 4px);
+  pointer-events:none;
+}
+.pc-1::after{
+  content:'SYSTEM ACTIVE';position:absolute;top:12px;right:12px;
+  font-size:9px;font-family:monospace;color:#00FF88;letter-spacing:.15em;
+  opacity:.6;
+}
+.pc-1:hover{box-shadow:0 0 48px rgba(0,255,136,.2), inset 0 0 60px rgba(0,255,136,.05);transform:translateY(-4px);}
+.pc-1 .pt{color:#00FF88;font-family:monospace;font-size:15px;letter-spacing:-.3px;}
+.pc-1 .pd{color:#5A8A6A;font-size:13px;line-height:1.7;}
+.pc-1 .pbdg{background:rgba(0,255,136,.1);border:1px solid rgba(0,255,136,.4);color:#00FF88;border-radius:2px;}
+.pc-1 .ptg{background:#060D0A;border:1px solid #00FF88;color:#00FF88;font-family:monospace;border-radius:2px;opacity:.7;}
+.pc-1 .pio{background:#060D0A;border:1px solid #00FF88;}
+.pc-1 .plnk{background:#060D0A;border:1px solid #00FF88;color:#00FF88;border-radius:2px;}
+.pc-1 .demo-lnk{background:rgba(0,255,136,.15);border:1px solid #00FF88;color:#00FF88;border-radius:2px;}
+
+/* Card 2 — AI Chatbot: Warm orange/amber chat bubble style */
+.pc-2{
+  background:linear-gradient(145deg,#1A0E00,#120800);
+  border:none;border-radius:20px;padding:28px;
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;transition:all .3s;
+  box-shadow:4px 4px 0 #FF6B00, -1px -1px 0 rgba(255,107,0,.2);
+}
+.pc-2::before{
+  content:'';position:absolute;top:-60px;right:-40px;
+  width:160px;height:160px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,107,0,.2),transparent 70%);
+}
+.pc-2:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 #FF6B00, -1px -1px 0 rgba(255,107,0,.2);}
+.pc-2 .pt{color:#FFB347;font-size:16px;font-weight:800;}
+.pc-2 .pd{color:#8A6040;font-size:13px;line-height:1.7;}
+.pc-2 .ptg{background:rgba(255,107,0,.1);border:1px solid rgba(255,107,0,.3);color:#FF8C42;border-radius:50px;font-family:monospace;}
+.pc-2 .pio{background:rgba(255,107,0,.1);border:1px solid rgba(255,107,0,.3);}
+.pc-2 .plnk{background:rgba(255,107,0,.1);border:1px solid rgba(255,107,0,.3);color:#FFB347;border-radius:50px;}
+.pc-2 .demo-lnk{background:#FF6B00;border:none;color:#fff;border-radius:50px;}
+
+/* Card 3 — Fraud Detection: Ice blue glassmorphism */
+.pc-3{
+  background:rgba(8,20,40,.7);
+  border:1px solid rgba(100,180,255,.2);
+  border-radius:24px;padding:28px;
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;transition:all .4s;
+  backdrop-filter:blur(12px);
+  box-shadow:0 8px 32px rgba(0,100,255,.1), inset 0 1px 0 rgba(255,255,255,.05);
+}
+.pc-3::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(100,180,255,.5),transparent);
+}
+.pc-3::after{
+  content:'';position:absolute;bottom:-80px;right:-80px;
+  width:200px;height:200px;border-radius:50%;
+  background:radial-gradient(circle,rgba(0,150,255,.1),transparent 70%);
+}
+.pc-3:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,100,255,.2), inset 0 1px 0 rgba(255,255,255,.08);}
+.pc-3 .pt{color:#64B4FF;font-size:16px;font-weight:700;letter-spacing:-.3px;}
+.pc-3 .pd{color:#4A6080;font-size:13px;line-height:1.7;}
+.pc-3 .ptg{background:rgba(100,180,255,.08);border:1px solid rgba(100,180,255,.2);color:#64B4FF;border-radius:6px;font-family:monospace;}
+.pc-3 .pio{background:rgba(0,100,255,.08);border:1px solid rgba(100,180,255,.2);}
+.pc-3 .plnk{background:rgba(100,180,255,.08);border:1px solid rgba(100,180,255,.2);color:#64B4FF;border-radius:8px;}
+.pc-3 .demo-lnk{background:linear-gradient(135deg,rgba(0,100,255,.3),rgba(100,180,255,.2));border:1px solid rgba(100,180,255,.4);color:#64B4FF;border-radius:8px;}
+
+/* Card 4 — Pega Test Gen: Bold purple with diagonal stripe */
+.pc-4{
+  background:#0E0820;
+  border-left:4px solid #B06EFF;
+  border-top:none;border-right:none;border-bottom:none;
+  border-radius:0 16px 16px 0;padding:28px;
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;transition:all .3s;
+}
+.pc-4::before{
+  content:'';position:absolute;top:0;left:0;right:0;bottom:0;
+  background:repeating-linear-gradient(-45deg,transparent,transparent 20px,rgba(176,110,255,.03) 20px,rgba(176,110,255,.03) 40px);
+}
+.pc-4::after{
+  content:'v2.4.1';position:absolute;bottom:14px;right:16px;
+  font-size:10px;font-family:monospace;color:rgba(176,110,255,.3);
+}
+.pc-4:hover{border-left-color:#D4A0FF;box-shadow:-4px 0 30px rgba(176,110,255,.2);transform:translateX(4px);}
+.pc-4 .pt{color:#D4A0FF;font-size:16px;font-weight:700;}
+.pc-4 .pd{color:#6A507A;font-size:13px;line-height:1.7;}
+.pc-4 .ptg{background:rgba(176,110,255,.08);border:1px solid rgba(176,110,255,.25);color:#B06EFF;border-radius:4px;font-family:monospace;}
+.pc-4 .pio{background:rgba(176,110,255,.1);border:1px solid rgba(176,110,255,.25);}
+.pc-4 .plnk{background:rgba(176,110,255,.1);border:1px solid rgba(176,110,255,.3);color:#D4A0FF;border-radius:4px;}
+.pc-4 .demo-lnk{background:linear-gradient(135deg,#7C3AED,#B06EFF);border:none;color:#fff;border-radius:4px;}
+
+/* Card 5 — Code Reviewer: Dark red/rust hacker terminal */
+.pc-5{
+  background:#0D0505;
+  border:1px solid #8B2020;
+  border-radius:8px;padding:28px;
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;transition:all .3s;
+  font-family:monospace;
+}
+.pc-5::before{
+  content:'> analyzing_code.py';
+  position:absolute;top:10px;right:14px;
+  font-size:9px;font-family:monospace;color:#8B2020;letter-spacing:.05em;
+  animation:blink-cursor 1.5s step-end infinite;
+}
+@keyframes blink-cursor{0%,100%{opacity:1}50%{opacity:0}}
+.pc-5:hover{border-color:#FF4444;box-shadow:0 0 30px rgba(255,68,68,.1);}
+.pc-5 .pt{color:#FF6B6B;font-family:monospace;font-size:15px;letter-spacing:-.2px;}
+.pc-5 .pd{color:#6B3535;font-size:13px;line-height:1.7;font-family:'Segoe UI',sans-serif;}
+.pc-5 .ptg{background:rgba(139,32,32,.15);border:1px solid rgba(139,32,32,.4);color:#FF6B6B;border-radius:2px;font-family:monospace;}
+.pc-5 .pio{background:rgba(139,32,32,.1);border:1px solid #8B2020;}
+.pc-5 .plnk{background:rgba(139,32,32,.1);border:1px solid #8B2020;color:#FF6B6B;border-radius:2px;}
+
+/* Card 6 — Java Framework: Clean corporate blue-white gradient */
+.pc-6{
+  background:linear-gradient(135deg,#F8FBFF 0%,#EEF4FF 100%);
+  border:1.5px solid #C8D8F0;
+  border-radius:16px;padding:28px;
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;transition:all .3s;
+  box-shadow:0 2px 12px rgba(59,130,246,.08);
+}
+.pc-6::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,#F97316,#3B82F6,#8B5CF6);
+}
+.pc-6:hover{transform:translateY(-5px);box-shadow:0 12px 40px rgba(59,130,246,.15);border-color:#93C5FD;}
+.pc-6 .pt{color:#1E3A5F;font-size:16px;font-weight:800;}
+.pc-6 .pd{color:#4A6080;font-size:13px;line-height:1.7;}
+.pc-6 .ptg{background:#EEF4FF;border:1.5px solid #C8D8F0;color:#3B82F6;border-radius:6px;font-family:monospace;}
+.pc-6 .pio{background:#EEF4FF;border:1.5px solid #C8D8F0;}
+.pc-6 .plnk{background:#EEF4FF;border:1.5px solid #C8D8F0;color:#3B82F6;border-radius:8px;}
+
+/* override default .pg .pc styles so they don't bleed into unique cards */
+.pg .pc{ background:unset; border:unset; border-radius:unset; box-shadow:unset; }
+.pg .pc:hover{ transform:unset; box-shadow:unset; }
+.pg .pc::before,.pg .pc::after{display:none;}
+
 </style>
 </head>
 <body>
@@ -649,17 +804,86 @@ footer a:hover{color:var(--p);}
     <div class="stag rv">06 — Projects</div>
     <h2 class="sh rv d1">Things I've <span class="hl">built</span></h2>
     <div class="pg">
-      <div class="pc pstar rv"><div class="pbdg">⭐ Featured</div><div class="ph"><div class="pio">🏥</div><a class="plnk" href="https://github.com/namankudesia/healthai-diagnosis-assistant" target="_blank">↗</a></div><div class="pt">HealthAI Diagnosis Assistant</div><div class="pd">Advanced clinical LLM with GPT-4 + Medical RAG, fine-tuning workflow, RLHF feedback loop and multi-layer safety system for real-world healthcare decision support.</div><div class="pst"><span class="ptg">Python</span><span class="ptg">GPT-4</span><span class="ptg">RAG</span><span class="ptg">Fine-Tuning</span><span class="ptg">RLHF</span><span class="ptg">FastAPI</span></div></div>
-      <div class="pc rv d1"><div class="ph"><div class="pio">🤖</div><a class="plnk" href="https://github.com/namankudesia/ai-customer-support-chatbot" target="_blank">↗</a><a class="plnk" href="https://namankudesia.github.io/ai-customer-support-chatbot/demo.html" target="_blank" style="background:var(--ts);border-color:rgba(0,184,148,.3);color:var(--teal);">▶ Demo</a></div><div class="pt">AI Customer Support Chatbot</div><div class="pd">Production RAG chatbot — LangChain, GPT-4, FAISS vector store, Redis-backed conversation memory, real-time SSE streaming.</div><div class="pst"><span class="ptg">LangChain</span><span class="ptg">FAISS</span><span class="ptg">Redis</span><span class="ptg">FastAPI</span></div></div>
-      <div class="pc rv d2"><div class="ph"><div class="pio">🛡️</div><a class="plnk" href="https://github.com/namankudesia/realtime-fraud-detection" target="_blank">↗</a><a class="plnk" href="https://namankudesia.github.io/realtime-fraud-detection/demo.html" target="_blank" style="background:var(--ts);border-color:rgba(0,184,148,.3);color:var(--teal);">▶ Demo</a></div><div class="pt">Real-Time Fraud Detection</div><div class="pd">ML fraud detection — 15+ real-time features, velocity scoring, z-score anomaly detection, SHAP explainability, sub-100ms decisions.</div><div class="pst"><span class="ptg">Python</span><span class="ptg">ML</span><span class="ptg">SHAP</span><span class="ptg">FastAPI</span></div></div>
-      <div class="pc rv"><div class="ph"><div class="pio">🧪</div><a class="plnk" href="https://github.com/namankudesia/pega-llm-testcase-generator" target="_blank">↗</a><a class="plnk" href="https://namankudesia.github.io/pega-llm-testcase-generator/demo.html" target="_blank" style="background:var(--ts);border-color:rgba(0,184,148,.3);color:var(--teal);">▶ Demo</a></div><div class="pt">Pega LLM Test Case Generator</div><div class="pd">GPT-4 converts requirements to Pega test cases using chain-of-thought prompting and BDD Gherkin output. ~50% faster authoring.</div><div class="pst"><span class="ptg">OpenAI</span><span class="ptg">Pega</span><span class="ptg">BDD</span><span class="ptg">Python</span></div></div>
-      <div class="pc rv d1"><div class="ph"><div class="pio">🔍</div><a class="plnk" href="https://github.com/namankudesia/smart-code-reviewer" target="_blank">↗</a></div><div class="pt">Smart Code Reviewer</div><div class="pd">AST static analysis + GPT-4 semantic review. Detects security flaws, complexity issues, and generates refactored snippets.</div><div class="pst"><span class="ptg">Python</span><span class="ptg">AST</span><span class="ptg">GPT-4</span><span class="ptg">Security</span></div></div>
-      <div class="pc rv d2"><div class="ph"><div class="pio">☕</div><a class="plnk" href="https://github.com/namankudesia/java-api-test-automation" target="_blank">↗</a></div><div class="pt">Java API Test Framework</div><div class="pd">Enterprise REST API framework — Java 17, TestNG, Rest-Assured, parallel execution, auto-retry, Jenkins CI/CD, rich Extent HTML reports.</div><div class="pst"><span class="ptg">Java</span><span class="ptg">TestNG</span><span class="ptg">Rest-Assured</span><span class="ptg">Jenkins</span></div></div>
+
+      <!-- CARD 1: HealthAI — dark clinical green terminal -->
+      <div class="pc pc-1 rv">
+        <div class="pbdg">⭐ Featured</div>
+        <div class="ph">
+          <div class="pio" style="font-size:24px;width:50px;height:50px;border-radius:6px;display:flex;align-items:center;justify-content:center;">🏥</div>
+          <a class="plnk" href="https://github.com/namankudesia/healthai-diagnosis-assistant" target="_blank">↗</a>
+        </div>
+        <div class="pt">HealthAI Diagnosis Assistant</div>
+        <div class="pd" style="flex:1;margin:10px 0 16px;">Advanced clinical LLM with GPT-4 + Medical RAG, fine-tuning, RLHF feedback loop and multi-layer safety for real-world healthcare decision support.</div>
+        <div class="pst"><span class="ptg">Python</span><span class="ptg">GPT-4</span><span class="ptg">RAG</span><span class="ptg">Fine-Tuning</span><span class="ptg">RLHF</span><span class="ptg">FastAPI</span></div>
+      </div>
+
+      <!-- CARD 2: AI Chatbot — warm orange bold offset shadow -->
+      <div class="pc pc-2 rv d1">
+        <div class="ph">
+          <div class="pio" style="font-size:24px;width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;">🤖</div>
+          <div style="display:flex;gap:7px;">
+            <a class="plnk" href="https://github.com/namankudesia/ai-customer-support-chatbot" target="_blank">↗</a>
+            <a class="demo-lnk plnk" href="https://namankudesia.github.io/ai-customer-support-chatbot/demo.html" target="_blank">▶ Demo</a>
+          </div>
+        </div>
+        <div class="pt">AI Customer Support Chatbot</div>
+        <div class="pd" style="flex:1;margin:10px 0 16px;">Production RAG chatbot — LangChain, GPT-4, FAISS vector store, Redis-backed conversation memory, real-time SSE streaming.</div>
+        <div class="pst"><span class="ptg">LangChain</span><span class="ptg">FAISS</span><span class="ptg">Redis</span><span class="ptg">FastAPI</span></div>
+      </div>
+
+      <!-- CARD 3: Fraud Detection — ice blue glassmorphism -->
+      <div class="pc pc-3 rv d2">
+        <div class="ph">
+          <div class="pio" style="font-size:24px;width:50px;height:50px;border-radius:16px;display:flex;align-items:center;justify-content:center;">🛡️</div>
+          <div style="display:flex;gap:7px;">
+            <a class="plnk" href="https://github.com/namankudesia/realtime-fraud-detection" target="_blank">↗</a>
+            <a class="demo-lnk plnk" href="https://namankudesia.github.io/realtime-fraud-detection/demo.html" target="_blank">▶ Demo</a>
+          </div>
+        </div>
+        <div class="pt">Real-Time Fraud Detection</div>
+        <div class="pd" style="flex:1;margin:10px 0 16px;">ML fraud detection — 15+ real-time features, velocity scoring, z-score anomaly detection, SHAP explainability, sub-100ms decisions.</div>
+        <div class="pst"><span class="ptg">Python</span><span class="ptg">ML</span><span class="ptg">SHAP</span><span class="ptg">FastAPI</span></div>
+      </div>
+
+      <!-- CARD 4: Pega Generator — purple diagonal stripes -->
+      <div class="pc pc-4 rv">
+        <div class="ph">
+          <div class="pio" style="font-size:24px;width:50px;height:50px;border-radius:8px;display:flex;align-items:center;justify-content:center;">🧪</div>
+          <div style="display:flex;gap:7px;">
+            <a class="plnk" href="https://github.com/namankudesia/pega-llm-testcase-generator" target="_blank">↗</a>
+            <a class="demo-lnk plnk" href="https://namankudesia.github.io/pega-llm-testcase-generator/demo.html" target="_blank">▶ Demo</a>
+          </div>
+        </div>
+        <div class="pt">Pega LLM Test Case Generator</div>
+        <div class="pd" style="flex:1;margin:10px 0 16px;">GPT-4 converts requirements to Pega test cases via chain-of-thought prompting and BDD Gherkin output. ~50% faster authoring time.</div>
+        <div class="pst"><span class="ptg">OpenAI</span><span class="ptg">Pega</span><span class="ptg">BDD</span><span class="ptg">Python</span></div>
+      </div>
+
+      <!-- CARD 5: Smart Code Reviewer — dark red hacker terminal -->
+      <div class="pc pc-5 rv d1">
+        <div class="ph">
+          <div class="pio" style="font-size:24px;width:50px;height:50px;border-radius:4px;display:flex;align-items:center;justify-content:center;">🔍</div>
+          <a class="plnk" href="https://github.com/namankudesia/smart-code-reviewer" target="_blank">↗</a>
+        </div>
+        <div class="pt">Smart Code Reviewer</div>
+        <div class="pd" style="flex:1;margin:10px 0 16px;">AST static analysis + GPT-4 semantic review. Detects security flaws, cyclomatic complexity issues, and auto-generates refactored snippets.</div>
+        <div class="pst"><span class="ptg">Python</span><span class="ptg">AST</span><span class="ptg">GPT-4</span><span class="ptg">Security</span></div>
+      </div>
+
+      <!-- CARD 6: Java Framework — clean corporate white/blue -->
+      <div class="pc pc-6 rv d2">
+        <div class="ph">
+          <div class="pio" style="font-size:24px;width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;">☕</div>
+          <a class="plnk" href="https://github.com/namankudesia/java-api-test-automation" target="_blank">↗</a>
+        </div>
+        <div class="pt">Java API Test Framework</div>
+        <div class="pd" style="flex:1;margin:10px 0 16px;">Enterprise REST API framework — Java 17, TestNG, Rest-Assured, parallel execution, auto-retry, Jenkins CI/CD and rich Extent HTML reports.</div>
+        <div class="pst"><span class="ptg">Java</span><span class="ptg">TestNG</span><span class="ptg">Rest-Assured</span><span class="ptg">Jenkins</span></div>
+      </div>
+
     </div>
   </div>
 </section>
-
-<div class="gdiv"></div>
 
 <!-- CERTS -->
 <section class="sec" id="certs" style="background:var(--bg2)">
